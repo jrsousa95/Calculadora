@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" id="display" disabled />
+      <div class="keys">
+        <button
+          class="action"
+          onclick="clearDisplay(); toggleOperatorActive(this)"
+        >
+          C
+        </button>
+        <button
+          class="action"
+          onclick="toggleSign(); toggleOperatorActive(this)"
+        >
+          +/-
+        </button>
+        <button
+          class="action"
+          onclick="calculatePercentage(); toggleOperatorActive(this)"
+        >
+          %
+        </button>
+        <button
+          class="operator"
+          onclick="appendOperator('/'); toggleOperatorActive(this)"
+        >
+          ÷
+        </button>
+
+        <button onclick="appendNumber('7'); toggleOperatorActive(this)">
+          7
+        </button>
+        <button onclick="appendNumber('8'); toggleOperatorActive(this)">
+          8
+        </button>
+        <button onclick="appendNumber('9'); toggleOperatorActive(this)">
+          9
+        </button>
+        <button
+          class="operator"
+          onclick="appendOperator('*'); toggleOperatorActive(this)"
+        >
+          x
+        </button>
+        <button onclick="appendNumber('4'); toggleOperatorActive(this)">
+          4
+        </button>
+        <button onclick="appendNumber('5'); toggleOperatorActive(this)">
+          5
+        </button>
+        <button onclick="appendNumber('6'); toggleOperatorActive(this)">
+          6
+        </button>
+        <button
+          class="operator"
+          onclick="appendOperator('-'); toggleOperatorActive(this)"
+        >
+          -
+        </button>
+
+        <button onclick="appendNumber('1'); toggleOperatorActive(this)">
+          1
+        </button>
+        <button onclick="appendNumber('2'); toggleOperatorActive(this)">
+          2
+        </button>
+        <button onclick="appendNumber('3'); toggleOperatorActive(this)">
+          3
+        </button>
+        <button
+          class="operator"
+          onclick="appendOperator('+'); toggleOperatorActive(this)"
+        >
+          +
+        </button>
+
+        <button
+          class="zero"
+          onclick="appendNumber('0'); toggleOperatorActive(this)"
+        >
+          0
+        </button>
+        <button onclick="appendDecimal(); toggleOperatorActive(this)">,</button>
+        <button
+          class="result"
+          onclick="calculate(); toggleOperatorActive(this)"
+        >
+          =
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

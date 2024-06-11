@@ -1,0 +1,83 @@
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #949393;
+}
+
+.calculator {
+  width: 300px;
+  max-width: 90%;
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#display {
+  width: calc(100% - 20px);
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 46px;
+  font-weight: 400;
+  text-align: right;
+  border: none;
+  border-radius: 10px;
+  background-color: #000000;
+  color: #fff;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  border-radius: 50px;
+  background-color: #343434;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+button.operator {
+  background-color: #fe9800;
+  color: #fff;
+}
+
+button.operator.active {
+  background-color: #fff;
+  color: #3a3a3a;
+}
+
+button.result {
+  background-color: #fe9800;
+  color: #fff;
+}
+
+button.action {
+  background-color: #dad9d8;
+  color: #000000;
+}
+
+button:hover {
+  background-color: #8a8989;
+}
+
+button:active {
+  transform: scale(0.95);
+}
